@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css">     
+    </head>
+    <body>
+        
+        <h1>Preetham's favorite movies are:</h1>
+            <ol>
+                {% for index in range(len) %}
+                    {% if movies[index] in fav %}
+			<div>
+			<li style="color:green">{{movies[index]}}<img src="{{picts[index]}}" align="right" /><br><br><br><br><br></li>
+			</div>
+                    {%endif%}
+		{%endfor%}
+		{% for each in range(len) %}
+		    {% if not movies[each] in fav %}
+			<div>
+			<li style="color:black">{{movies[each]}}<img src="{{picts[each]}}" align="right" /><br><br><br><br><br></li>
+			</div>
+		    {%endif%}     	
+		{%endfor%}
+            </ol>
+    </body>
+</html>
